@@ -1,0 +1,39 @@
+@import "src/variables";
+
+.search-form {
+  width: 430px;
+  height: 50px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background: $white;
+  box-shadow: 0 2px 5px 0 rgba(38, 51, 77, 0.03);
+}
+
+.search-form__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {}
+
+  input {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    color: $grey-blue-80;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    &::placeholder {
+      color: $grey-blue-80;
+    }
+  }
+}
+
+.search-form__submit {
+  background: transparent;
+}
