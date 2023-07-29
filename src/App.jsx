@@ -1,8 +1,12 @@
+import PageLayout from './components/page-layout';
+import NavMenu from './components/nav-menu';
+
 function App() {
   return (
-    <div>
+    <PageLayout>
+      <NavMenu />
       Hello world!
-    </div>
+    </PageLayout>
   );
 }
 
