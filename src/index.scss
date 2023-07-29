@@ -6,7 +6,19 @@
   font-style: normal;
 }
 
-/*Обнуление и общие стили*/
+/*Инициализация переменных*/
+$grey-blue-50: #4D5E80;
+$grey-blue-60: #6B7A99;
+$grey-blue-70: #7D8FB3;
+$grey-blue-80: #ADB8CC;
+$grey-blue-85: #C3CAD9;
+$grey-blue-90: #DADEE6;
+$grey-blue-92: #DFE3EB;
+$grey-blue-95: #EDEFF2;
+$grey-blue-97: #F5F6F7;
+$grey-blue-98: #F7F8FA;
+
+  /*Обнуление и общие стили*/
 * {
   padding: 0;
   margin: 0;
