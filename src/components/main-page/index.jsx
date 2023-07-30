@@ -3,7 +3,7 @@ import LeftMenu from '../left-menu';
 import Profile from '../profile';
 import './style.scss';
 
-function MainContent() {
+function MainPage() {
   return (
     <div className="main-content">
       <LeftMenu />
@@ -12,4 +12,4 @@ function MainContent() {
   );
 }
 
-export default memo(MainContent);
+export default memo(MainPage);

@@ -1,12 +1,12 @@
 import PageLayout from './components/page-layout';
 import Navigation from './components/navigation';
-import MainContent from './components/main-content';
+import MainPage from './components/main-page';
 
 function App() {
   return (
     <PageLayout>
       <Navigation />
-      <MainContent />
+      <MainPage />
     </PageLayout>
   );
 }
