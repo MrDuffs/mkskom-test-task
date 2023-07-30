@@ -1,0 +1,33 @@
+@import "src/variables";
+
+.side-controls-labels {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-top: 2px solid $grey-blue-97;
+}
+
+.side-controls-labels__title {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  color: $grey-blue-60;
+}
+
+.side-controls-labels__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  .side-controls-labels__item {
+    button {
+      background: $white;
+    }
+  }
+}

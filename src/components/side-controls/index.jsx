@@ -2,6 +2,7 @@ import { memo } from 'react';
 import file from '../../assets/icons/side-controls/file.svg';
 import folder from '../../assets/icons/side-controls/folder.svg';
 import addCircle from '../../assets/icons/side-controls/add_circle.svg';
+import SideControlLabels from '../side-control-labels';
 import './style.scss';
 
 function SideControls() {
@@ -115,6 +116,7 @@ function SideControls() {
           </button>
         </div>
       </div>
+      <SideControlLabels />
     </div>
   );
 }
