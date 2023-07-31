@@ -1,15 +1,20 @@
 import { memo } from 'react';
 import './style.scss';
 
-function ImageItem({ image }) {
+function ImageItem({ image, layout }) {
   return (
-    <div className="image-item">
-      <div className="image-item__image">
+    <div className={`image-item ${layout}`}>
+      <div className={`image-item__image ${layout}`}>
         <img src={image.url} alt={image.id} />
       </div>
-      <div className="image-item__title">
-        {image.title}
-      </div>
+      {
+        layout === 'flex'
+          ? (
+            <div className="image-item__title">
+              {image.title}
+            </div>
+          ) : null
+      }
     </div>
   );
 }

@@ -1,8 +1,13 @@
-.image-list {
+.image-list.flex {
   display: flex;
   flex-wrap: wrap;
-  //flex-basis: 100%;
-  //flex-grow: 1;
-  //align-self: stretch;
   gap: 30px;
+}
+
+.image-list.grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+
 }

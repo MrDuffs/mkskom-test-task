@@ -1,6 +1,6 @@
 @import "src/variables";
 
-.image-item {
+.image-item.flex {
   width: 160px;
   height: 190px;
   display: flex;
@@ -11,7 +11,7 @@
 
   overflow: hidden;
 
-  .image-item__image {
+  .image-item__image.flex {
     padding: 5px;
     border-radius: 10px;
     border: 2px solid $grey-blue-97;
@@ -36,5 +36,27 @@
     font-weight: 700;
     line-height: 15px;
     color: $grey-blue-60;
+  }
+}
+
+.image-item.grid {
+
+  .image-item__image.grid {
+    img {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    grid-column:  span 6;
+    grid-row: 1;
+  }
+
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    grid-column: span 4;
+    grid-row: 2;
   }
 }
