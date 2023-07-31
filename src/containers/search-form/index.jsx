@@ -35,6 +35,7 @@ function SearchForm() {
     e.preventDefault();
     if (!validationError) {
       callbacks.onSearch(searchValue);
+      setSearchValue('');
     }
   };
 
