@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import SideControls from '../side-controls';
-import Content from '../content';
+import Content from '../../containers/content';
 import './style.scss';
 
 function MainContent() {
