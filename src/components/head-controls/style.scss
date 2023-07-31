@@ -10,6 +10,7 @@
 }
 
 .head-controls__buttons {
+  height: 40px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -19,7 +20,6 @@
     justify-content: center;
     align-items: center;
     background: $white;
-    border: 2px solid $grey-blue-97;
     box-shadow: 0 2px 5px 0 rgba(38, 51, 77, 0.03);
   }
 }
@@ -27,10 +27,13 @@
 .display-group-button {
   display: flex;
   align-items: center;
+  border-radius: 100px;
+  border: 2px solid $grey-blue-97;
 }
 
 .display-group-button button:first-child {
   padding: 6px 5px 6px 10px;
+  border-right: 2px solid $grey-blue-97;
   border-radius: 100px 0 0 100px;
 }
 .display-group-button button:last-child {
@@ -42,6 +45,7 @@
   button {
     padding: 6px;
     border-radius: 100px;
+    border: 2px solid $grey-blue-97;
   }
 }
 
