@@ -1,7 +1,8 @@
-import { memo, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { getFlexboxPhotos, getGridPhotos } from '../../store/reducers/photos/actions';
 import ImageList from '../image-list';
+import ImageItem from '../image-item';
 import './style.scss';
 
 function Gallery({ layout }) {
@@ -20,12 +21,22 @@ function Gallery({ layout }) {
     loading: state.photosList.loading,
   }), shallowEqual);
 
+  const renders = {
+    imageItem: useCallback((item) => (
+      <ImageItem image={item} layout={layout} />
+    ), [layout]),
+  };
+
   return (
     <div className="gallery">
       {
         select.loading ? 'Loading...'
           : (
-            <ImageList list={select.photos} layout={layout} />
+            <ImageList
+              list={select.photos}
+              renderItem={renders.imageItem}
+              layout={layout}
+            />
           )
       }
     </div>

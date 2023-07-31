@@ -1,12 +1,13 @@
-import { memo } from 'react';
-import ImageItem from '../image-item';
+import React, { memo } from 'react';
 import './style.scss';
 
-function ImageList({ list }) {
+function ImageList({ list, renderItem, layout }) {
   return (
-    <div className="image-list">
+    <div className={`image-list ${layout}`}>
       {list.map((item) => (
-        <ImageItem key={item.id} image={item} />
+        <React.Fragment key={item.id}>
+          {renderItem(item)}
+        </React.Fragment>
       ))}
     </div>
   );
