@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { flexboxPhotosReducer } from './flexbox-photos';
+import { photosReducer } from './photos';
 
 const rootReducer = combineReducers({
-  flexboxPhotos: flexboxPhotosReducer,
+  photosList: photosReducer,
 });
 
 export default rootReducer;
