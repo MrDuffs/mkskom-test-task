@@ -10,7 +10,6 @@
 .side-controls__add-note-btn {
   display: flex;
   padding: 30px 20px 15px 20px;
-  flex-direction: column;
   align-self: stretch;
 
   button {
@@ -20,6 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    flex-grow: 1;
     border-radius: 30px;
     background: $orange;
     border: 2px solid $orange;
@@ -87,7 +87,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 
   .side-controls__item {
     display: flex;
