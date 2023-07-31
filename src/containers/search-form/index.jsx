@@ -49,11 +49,11 @@ function SearchForm() {
           onChange={handleSearchInputChange}
           onSubmit={onSubmit}
         />
-        {validationError && (
-          <div className="search-form__input-error">
-            {validationError}
-          </div>
-        )}
+        <div
+          className={`search-form__input-error ${validationError ? 'active' : ''}`}
+        >
+          {validationError}
+        </div>
       </div>
       <button
         type="submit"
