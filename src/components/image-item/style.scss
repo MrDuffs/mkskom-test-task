@@ -1,0 +1,40 @@
+@import "src/variables";
+
+.image-item {
+  width: 160px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+
+  overflow: hidden;
+
+  .image-item__image {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid $grey-blue-97;
+    background: $white;
+    box-shadow: 0 2px 5px 0 rgba(38, 51, 77, 0.03);
+
+    img {
+      width: 150px;
+      height: 110px;
+      border-radius: 5px;
+    }
+  }
+
+  .image-item__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    color: $grey-blue-60;
+  }
+}
