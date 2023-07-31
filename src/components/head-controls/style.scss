@@ -24,21 +24,28 @@
   }
 }
 
-.display-group-button {
+.display-switcher {
   display: flex;
   align-items: center;
   border-radius: 100px;
   border: 2px solid $grey-blue-97;
 }
 
-.display-group-button button:first-child {
+.display-switcher__flex-btn {
   padding: 6px 5px 6px 10px;
   border-right: 2px solid $grey-blue-97;
   border-radius: 100px 0 0 100px;
 }
-.display-group-button button:last-child {
+.display-switcher__flex-btn.active {
+  background: $grey-blue-97;
+}
+
+.display-switcher__grid-btn {
   padding: 6px 10px 6px 5px;
   border-radius: 0 100px 100px 0;
+}
+.display-switcher__grid-btn.active {
+  background: $grey-blue-97;
 }
 
 .head-controls__delete-btn {

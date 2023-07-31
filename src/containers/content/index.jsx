@@ -14,7 +14,7 @@ function Content() {
 
   return (
     <div className="content">
-      <HeadControl setLayout={callbacks.onChangeLayout} />
+      <HeadControl layout={layout} setLayout={callbacks.onChangeLayout} />
       <Gallery layout={layout} />
     </div>
   );

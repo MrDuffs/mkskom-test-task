@@ -5,7 +5,7 @@ import del from '../../assets/icons/head-controls/delete.svg';
 import search from '../../assets/icons/head-controls/search.svg';
 import './style.scss';
 
-function HeadControl({ setLayout }) {
+function HeadControl({ layout, setLayout }) {
   const handleClick = (e) => {
     if (e.target.id === 'flex') {
       setLayout('flex');
@@ -17,14 +17,16 @@ function HeadControl({ setLayout }) {
   return (
     <div className="head-controls">
       <div className="head-controls__buttons">
-        <div className="display-group-button">
+        <div className="display-switcher">
           <button
+            className={`display-switcher__flex-btn ${layout === 'flex' ? 'active' : ''}`}
             type="button"
             onClick={handleClick}
           >
             <img id="flex" src={flexbox} alt="flexbox" />
           </button>
           <button
+            className={`display-switcher__grid-btn ${layout === 'grid' ? 'active' : ''}`}
             type="button"
             onClick={handleClick}
           >
