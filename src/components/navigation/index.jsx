@@ -4,7 +4,7 @@ import more from '../../assets/icons/navigation/more.svg';
 import user from '../../assets/icons/navigation/user.svg';
 import notification from '../../assets/icons/navigation/notification.svg';
 import cancel from '../../assets/icons/navigation/cancel.svg';
-import SearchForm from '../search-form';
+import SearchForm from '../../containers/search-form';
 import './style.scss';
 
 function Navigation() {
