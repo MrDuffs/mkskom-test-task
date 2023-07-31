@@ -1,24 +1,33 @@
-import { memo, useEffect, useState } from 'react';
+import { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { getFlexboxPhotos } from '../../store/reducers/flexbox-photos/actions';
+import { getFlexboxPhotos, getGridPhotos } from '../../store/reducers/photos/actions';
 import ImageList from '../image-list';
 import './style.scss';
 
-function Gallery() {
+function Gallery({ layout }) {
   const dispatch = useDispatch();
-  const [layout, setLayout] = useState('flex');
 
   useEffect(() => {
-    dispatch(getFlexboxPhotos());
-  }, [dispatch]);
+    if (layout === 'flex') {
+      dispatch(getFlexboxPhotos());
+    } else if (layout === 'grid') {
+      dispatch(getGridPhotos());
+    }
+  }, [layout, dispatch]);
 
   const select = useSelector((state) => ({
-    photos: state.flexboxPhotos.data,
+    photos: state.photosList.data,
+    loading: state.photosList.loading,
   }), shallowEqual);
 
   return (
     <div className="gallery">
-      <ImageList list={select.photos} />
+      {
+        select.loading ? 'Loading...'
+          : (
+            <ImageList list={select.photos} layout={layout} />
+          )
+      }
     </div>
   );
 }
